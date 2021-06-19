@@ -11,7 +11,7 @@ mongoose.connect('mongodb+srv://Sapiens:Sapiens@cluster0.okj9q.mongodb.net/myFir
 mongoose.set('useCreateIndex',true)
 mongoose.Promise =global.Promise;
 
-const port = "3000";
+const port = (process.env.PORT || 5000);
 //CORS Solution
 
 app.use(function(req, res, next) {
